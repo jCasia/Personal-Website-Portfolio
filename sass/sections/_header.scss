@@ -1,0 +1,59 @@
+.header {
+  background-color: $color-grey;
+  padding: 15px 60px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    height: 50px;
+    margin-bottom: -5px;
+
+    visibility: hidden;
+  }
+
+  &-nav {
+    &__list {
+      @include flex;
+      gap: 50px;
+
+      font-size: 1.75rem;
+      list-style: none;
+    }
+  }
+
+  &__link {
+    visibility: hidden;
+  }
+
+  &__link:link,
+  &__link:visited {
+    display: inline-block;
+    color: $color-pure-white;
+    text-decoration: none;
+    position: relative;
+    font-weight: 500;
+
+    visibility: hidden;
+  }
+
+  &__link::after {
+    content: "";
+    position: absolute;
+    background-color: $color-light-brown;
+    height: 3px;
+    width: 0;
+    right: 0;
+    bottom: -5px;
+
+    transition: all 0.4s;
+  }
+
+  &__link:hover:after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 100%;
+  }
+}

@@ -1,0 +1,116 @@
+.about-section {
+  background-color: $color-grey-white;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "skills content";
+  gap: 15px;
+  padding: 30px 0;
+
+  &__content {
+    grid-area: content;
+
+    @include flex-column;
+
+    text-align: center;
+    gap: 20px;
+    padding: 30px 20px;
+
+    &-header {
+      font-size: 3rem;
+    }
+
+    &-text {
+      font-size: 1.6rem;
+      font-family: $font-voll;
+      line-height: 2;
+    }
+  }
+
+  &__skills {
+    grid-area: skills;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    &-tools {
+      // flex-grow: 1;
+
+      display: flex;
+      gap: 20px;
+    }
+
+    &-box-content {
+      @include flex-column;
+    }
+
+    &-text {
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+  }
+
+  &__soon {
+    @include flex-column;
+    gap: 7.5px;
+
+    &-container {
+      @include flex;
+      gap: 20px;
+    }
+    &-text {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__logos {
+    width: 50px;
+    height: 50px;
+  }
+
+  &__box-close,
+  &__box-open {
+    @include box;
+  }
+}
+
+///
+
+strong {
+  color: $color-light-brown;
+  font-weight: 700;
+}
+
+.toggle-wrapper {
+  @include flex-column;
+  gap: 25px;
+  background-color: $color-white;
+  padding: 20px;
+  border-radius: 15px;
+  position: relative;
+
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(17.5px);
+  transition: all 0.4s;
+}
+
+.down-triangle {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-top: 30px solid $color-white;
+  position: absolute;
+  bottom: -30px;
+}
+
+.box-toggle {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
