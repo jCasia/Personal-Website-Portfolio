@@ -7,6 +7,7 @@ const logo = document.querySelector(".header__logo");
 const heroImg = document.querySelector(".hero__img");
 const arrow = document.querySelector(".arrow");
 
+// when screen reloaded go back to the top of the page
 // window.addEventListener("beforeunload", () => {
 //   window.scrollTo(0, 0);
 // });
@@ -43,9 +44,11 @@ window.addEventListener("load", revealAnimation);
 
 const box = document.querySelector(".box");
 const tools = document.querySelector(".toggle-wrapper");
+const curlyArrow = document.querySelector(".curly-arrow");
 
 const boxReveal = () => {
   tools.classList.toggle("box-toggle");
+  curlyArrow.classList.toggle("hide");
 
   if (tools.classList.contains("box-toggle")) {
     box.classList.replace("fa-box", "fa-box-open");

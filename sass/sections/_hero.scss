@@ -1,12 +1,14 @@
-.hero {
+.hero-section {
   background-image: url("../../images/background-desktop-bottom.svg"),
     url("../../images/background-desktop-top.svg");
   background-repeat: no-repeat;
   background-size: cover;
+}
 
+.hero {
   @include flex-column;
 
-  min-height: 95vh;
+  min-height: 675px;
 
   &__img {
     height: 375px;
@@ -17,6 +19,7 @@
   &__heading {
     font-size: 4.5rem;
     font-family: $font-voll;
+    font-style: italic;
     color: $color-black-grey;
 
     visibility: hidden;
@@ -25,6 +28,6 @@
 
 .arrow {
   font-size: 4rem;
-
+  color: $color-grey;
   visibility: hidden;
 }

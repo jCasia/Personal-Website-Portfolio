@@ -42,7 +42,8 @@
     content: "";
     position: absolute;
     background-color: $color-light-brown;
-    height: 3px;
+    border-radius: 20px;
+    height: 4.5px;
     width: 0;
     right: 0;
     bottom: -5px;
@@ -53,7 +54,6 @@
   &__link:hover:after {
     content: "";
     position: absolute;
-    height: 3px;
     width: 100%;
   }
 }
