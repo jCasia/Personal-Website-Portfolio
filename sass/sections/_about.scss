@@ -3,20 +3,19 @@
 }
 
 .about {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-areas: "skills content";
+  @include flex-column;
+
   gap: 15px;
-  padding: 30px 20px;
+  text-align: center;
+  padding: 60px 40px;
 
   &__content {
     grid-area: content;
 
     @include flex-column;
-
-    text-align: center;
     gap: 20px;
-    padding: 30px 20px;
+
+    max-width: 900px;
 
     &-header {
       font-size: 3rem;
@@ -36,7 +35,6 @@
     gap: 50px;
 
     position: relative;
-    min-height: 380px;
 
     &-tools {
       display: flex;
@@ -119,7 +117,7 @@ strong {
 
 .curly-arrow {
   position: absolute;
-  transform: translate(-100px, 15px);
+  transform: translate(-120px, -10px);
   transition: all 0.3s;
 }
 
