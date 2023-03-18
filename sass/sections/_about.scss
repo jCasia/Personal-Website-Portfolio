@@ -18,7 +18,9 @@
     max-width: 900px;
 
     &-header {
-      font-size: 3rem;
+      font-size: 4rem;
+      text-transform: capitalize;
+      font-weight: 500;
     }
 
     &-text {
@@ -46,7 +48,7 @@
     }
 
     &-text {
-      font-size: 2.5rem;
+      font-size: 1.85rem;
       font-weight: 600;
     }
   }
@@ -71,7 +73,14 @@
 
   &__box-close,
   &__box-open {
-    @include box;
+    color: $color-brown;
+    font-size: 67.5px;
+    cursor: pointer;
+    transition: all 0.4s;
+
+    &:hover {
+      color: $color-light-brown;
+    }
   }
 }
 

@@ -1,9 +1,162 @@
 .projects-section {
+  background-image: url("../../images/background-project.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
   @include flex-column;
+  gap: 50px;
+
+  padding: 60px 0;
+
+  &__heading-wrapper {
+    @include flex-column;
+    gap: 10px;
+  }
 
   &__heading {
-    font-size: 3rem;
-    text-transform: uppercase;
-    margin: 20px 0;
+    font-size: 4rem;
+    font-weight: 500;
+  }
+
+  &__subhead {
+    font-size: 1.95rem;
+    font-family: $font-voll;
+
+    font-style: italic;
+  }
+}
+
+////
+///
+
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 50px;
+  grid-template-areas:
+    "project-1 project-2"
+    "project-3 project-4";
+
+  &__card {
+    max-width: 625px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 10px rgba($color-brown, 0.25);
+    background-color: $color-pure-white;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "cont img";
+
+    &-1 {
+      grid-area: project-1;
+    }
+    &-2 {
+      grid-area: project-2;
+    }
+    &-3 {
+      grid-area: project-3;
+    }
+    &-4 {
+      grid-area: project-4;
+
+      @include flex;
+    }
+
+    &-img {
+      grid-area: img;
+    }
+
+    &-img1 {
+      background-image: url("../../images/sunnyside.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    &-img2 {
+    }
+    &-img3 {
+    }
+    &-img4 {
+    }
+    &-content {
+      grid-area: cont;
+      padding: 20px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    &-heading {
+      font-size: 2.2rem;
+      font-weight: 600;
+      letter-spacing: 1.1px;
+      border-bottom: 2px solid rgba($color-brown, 0.25);
+    }
+
+    &-summary {
+      font-size: 1.35rem;
+      line-height: 1.55;
+      font-family: $font-voll;
+    }
+  }
+
+  &__link-wrapper {
+    font-size: 1.3rem;
+    display: flex;
+    gap: 25px;
+
+    &-live:link,
+    &-live:visited,
+    &-github:link,
+    &-github:visited {
+      display: inline-block;
+      text-decoration: none;
+      color: $color-pure-white;
+      padding: 7.5px 13px;
+      border-radius: 20px;
+      box-shadow: 0 4px 7.5px rgba($color-brown, 0.35);
+
+      transition: all 0.3s;
+    }
+
+    &-live:link,
+    &-live:visited {
+      background-color: $color-brown;
+    }
+
+    &-live:hover,
+    &-live:active {
+      background-color: $color-light-brown;
+      transform: translateY(-1.5px);
+      box-shadow: 0 3px 4px rgba($color-brown, 0.35);
+    }
+
+    &-github:link,
+    &-github:visited {
+      background-color: $color-grey;
+      color: $color-pure-white;
+    }
+
+    &-github:hover,
+    &-github:active {
+      background-color: $color-black-grey;
+      transform: translateY(-1.5px);
+      box-shadow: 0 3px 4px rgba($color-brown, 0.35);
+    }
+
+    &-fem {
+      font-size: 1.5rem;
+      color: $color-brown;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.3s;
+
+      &:hover {
+        color: $color-light-brown;
+      }
+    }
   }
 }

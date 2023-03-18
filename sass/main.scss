@@ -3,8 +3,7 @@
 @import "./base/typography";
 @import "./base/global";
 
-@import "./components/mobile-nav";
-
+@import "./sections/mobile-nav.scss";
 @import "./sections/_header";
 @import "./sections/hero";
 @import "./sections/about";

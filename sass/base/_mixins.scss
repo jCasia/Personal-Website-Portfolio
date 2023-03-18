@@ -1,9 +1,3 @@
-@mixin box {
-  color: $color-light-brown;
-  font-size: 67.5px;
-  cursor: pointer;
-}
-
 @mixin flex {
   display: flex;
   align-items: center;
