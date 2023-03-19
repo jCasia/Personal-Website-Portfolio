@@ -14,8 +14,7 @@
   }
 
   &__heading {
-    font-size: 4rem;
-    font-weight: 500;
+    @include sectionHeading;
   }
 
   &__subhead {
@@ -33,7 +32,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(2, 1fr);
-  gap: 50px;
+  gap: 40px;
   grid-template-areas:
     "project-1 project-2"
     "project-3 project-4";
@@ -44,9 +43,11 @@
     overflow: hidden;
     box-shadow: 0 6px 10px rgba($color-brown, 0.25);
     background-color: $color-pure-white;
+    // border-left: 1px solid $color-grey;
+    // border-right: 1px solid $color-light-brown;
 
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 0.6fr 0.4fr;
     grid-template-areas: "cont img";
 
     &-1 {
@@ -66,27 +67,33 @@
 
     &-img {
       grid-area: img;
+      filter: grayscale(12.5%);
+
+      transition: all 0.3s;
+
+      &:hover {
+        filter: grayscale(0);
+      }
     }
 
     &-img1 {
-      background-image: url("../../images/sunnyside.png");
+      background-image: url("../../images/sunnyside-desktop.png");
       background-size: cover;
       background-repeat: no-repeat;
     }
-    &-img2 {
-    }
-    &-img3 {
-    }
-    &-img4 {
-    }
+    // &-img2 {
+    // }
+    // &-img3 {
+    // }
+
     &-content {
       grid-area: cont;
-      padding: 20px;
+      padding: 27.5px;
 
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 25px;
+      gap: 30px;
     }
 
     &-heading {
@@ -94,44 +101,32 @@
       font-weight: 600;
       letter-spacing: 1.1px;
       border-bottom: 2px solid rgba($color-brown, 0.25);
+      align-self: flex-start;
     }
 
     &-summary {
       font-size: 1.35rem;
-      line-height: 1.55;
+      line-height: 1.75;
       font-family: $font-voll;
+      color: $color-grey;
     }
   }
 
   &__link-wrapper {
     font-size: 1.3rem;
     display: flex;
-    gap: 25px;
+    gap: 15px;
 
     &-live:link,
     &-live:visited,
     &-github:link,
     &-github:visited {
-      display: inline-block;
-      text-decoration: none;
-      color: $color-pure-white;
-      padding: 7.5px 13px;
-      border-radius: 20px;
-      box-shadow: 0 4px 7.5px rgba($color-brown, 0.35);
-
-      transition: all 0.3s;
+      @include button;
     }
 
-    &-live:link,
-    &-live:visited {
-      background-color: $color-brown;
-    }
-
-    &-live:hover,
-    &-live:active {
+    &-live:hover {
       background-color: $color-light-brown;
-      transform: translateY(-1.5px);
-      box-shadow: 0 3px 4px rgba($color-brown, 0.35);
+      @include hoverUp;
     }
 
     &-github:link,
@@ -140,11 +135,14 @@
       color: $color-pure-white;
     }
 
-    &-github:hover,
-    &-github:active {
+    &-github:hover {
       background-color: $color-black-grey;
-      transform: translateY(-1.5px);
-      box-shadow: 0 3px 4px rgba($color-brown, 0.35);
+      @include hoverUp;
+    }
+
+    &-github:active,
+    &-live:active {
+      transform: translateY(0);
     }
 
     &-fem {

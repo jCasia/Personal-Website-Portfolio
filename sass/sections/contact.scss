@@ -1,0 +1,57 @@
+.contact-section {
+  padding: 60px 0;
+  background-color: $color-grey-white;
+}
+
+.contact {
+  @include flex-column;
+  gap: 20px;
+  text-align: center;
+
+  &__heading {
+    @include sectionHeading;
+
+    margin-bottom: 20px;
+  }
+
+  &__cv-text {
+    @include sectionText;
+    max-width: 950px;
+  }
+
+  &__link:link,
+  &__link:visited {
+    @include button;
+    font-size: 1.95rem;
+    padding: 9.5px 40px;
+  }
+
+  &__link:hover,
+  &__link:active {
+    background-color: $color-light-brown;
+  }
+
+  &__social-wrapper {
+    font-size: 4rem;
+
+    &-link {
+      color: $color-brown;
+      transition: all 0.3s;
+
+      &:hover {
+        color: $color-light-brown;
+      }
+    }
+    @include flex;
+    gap: 20px;
+
+    &-fem {
+      filter: brightness(75%);
+      transition: all 0.3s;
+
+      &:hover {
+        filter: brightness(100%);
+      }
+    }
+  }
+}

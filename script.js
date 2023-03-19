@@ -28,11 +28,15 @@ const revealAnimation = () => {
   timelineFade
     .from(topHeading, { autoAlpha: 0, x: -50, delay: 0.1, duration: 0.75 })
     .from(heroImg, { autoAlpha: 0, duration: 0.75 }, "-=0.35")
-    .from(botHeading, { autoAlpha: 0, x: -50, duration: 0.75 }, "-=0.5")
+    .from(
+      botHeading,
+      { autoAlpha: 0, y: 50, scale: 1.75, duration: 0.75 },
+      "-=0.5"
+    )
     .from(arrow, { autoAlpha: 0, duration: 0.75 }, "-=0.5")
     .from(
       navLinks,
-      { autoAlpha: 0, y: -50, duration: 0.4, stagger: 0.1 },
+      { autoAlpha: 0, y: -50, duration: 0.5, stagger: 0.1 },
       "-=0.25"
     )
     .from(logo, { autoAlpha: 0, y: -50 }, "<");

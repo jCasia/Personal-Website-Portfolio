@@ -10,3 +10,31 @@
   align-items: center;
   justify-content: center;
 }
+
+@mixin button {
+  display: inline-block;
+  text-decoration: none;
+  color: $color-pure-white;
+  padding: 7.5px 13px;
+  border-radius: 20px;
+  box-shadow: 0 4px 7.5px rgba($color-brown, 0.35);
+  background-color: $color-brown;
+  transition: all 0.3s;
+}
+
+@mixin sectionHeading {
+  font-size: 4rem;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+@mixin sectionText {
+  font-size: 1.95rem;
+  font-family: $font-voll;
+  line-height: 2;
+}
+
+@mixin hoverUp {
+  transform: translateY(-1.5px);
+  box-shadow: 0 3px 4px rgba($color-brown, 0.35);
+}
