@@ -1,5 +1,6 @@
 "use strict";
 
+//Hero Animation
 const topHeading = document.querySelector(".top-heading");
 const botHeading = document.querySelector(".bot-heading");
 const navLinks = document.querySelectorAll(".header__link");
@@ -44,7 +45,7 @@ const revealAnimation = () => {
 
 window.addEventListener("load", revealAnimation);
 
-//
+//Box Animation
 
 const box = document.querySelector(".box");
 const tools = document.querySelector(".toggle-wrapper");

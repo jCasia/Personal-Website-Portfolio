@@ -1,13 +1,10 @@
-.about-section {
-  background-color: $color-grey-white;
-}
-
 .about {
   @include flex-column;
 
   gap: 15px;
   text-align: center;
   padding: 60px 40px;
+  background-color: $color-grey-white;
 
   &__content {
     grid-area: content;

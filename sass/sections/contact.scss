@@ -1,12 +1,10 @@
-.contact-section {
-  padding: 60px 0;
-  background-color: $color-grey-white;
-}
-
 .contact {
   @include flex-column;
   gap: 20px;
   text-align: center;
+
+  padding: 60px 0;
+  background-color: $color-grey-white;
 
   &__heading {
     @include sectionHeading;
