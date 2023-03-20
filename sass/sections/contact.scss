@@ -1,6 +1,6 @@
 .contact {
   @include flex-column;
-  gap: 20px;
+  gap: 10px;
   text-align: center;
 
   padding: 60px 0;
@@ -41,7 +41,7 @@
       }
     }
     @include flex;
-    gap: 20px;
+    gap: 40px;
 
     &-fem {
       filter: brightness(75%);

@@ -38,15 +38,18 @@
     "project-3 project-4";
 
   &__card {
-    max-width: 625px;
+    max-width: 450px;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 6px 10px rgba($color-brown, 0.25);
-    background-color: $color-pure-white;
+    background-color: $color-darker-white;
 
     display: grid;
-    grid-template-columns: 0.6fr 0.4fr;
-    grid-template-areas: "cont img";
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "img"
+      "cont";
 
     &-1 {
       grid-area: project-1;
@@ -59,8 +62,6 @@
     }
     &-4 {
       grid-area: project-4;
-
-      @include flex;
     }
 
     &-img {
@@ -84,6 +85,15 @@
     // &-img3 {
     // }
 
+    &-img-wrapper-4 {
+      @include flex;
+    }
+
+    &-img4 {
+      max-width: 450px;
+      max-height: 200px;
+    }
+
     &-content {
       grid-area: cont;
       padding: 27.5px;
@@ -91,7 +101,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 30px;
+      gap: 15px;
     }
 
     &-heading {
