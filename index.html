@@ -62,7 +62,10 @@
             role="presentation"
           />
           <h1 class="hero__heading bot-heading">Junior Front End Developer</h1>
-          <i class="fa-solid fa-angles-down arrow" role="presentation"></i>
+          <i
+            class="fa-solid fa-angles-down hero__arrow"
+            role="presentation"
+          ></i>
         </div>
       </section>
 
@@ -187,6 +190,30 @@
                     title="three.js"
                   />
                 </div>
+                <div class="logo-container">
+                  <img
+                    src="./images/nodejs.svg"
+                    alt=""
+                    class="about__logos"
+                    title="node.js"
+                  />
+                </div>
+                <div class="logo-container">
+                  <img
+                    src="./images/express.svg"
+                    alt=""
+                    class="about__logos"
+                    title="Express.js"
+                  />
+                </div>
+                <div class="logo-container">
+                  <img
+                    src="./images/mongodb.svg"
+                    alt=""
+                    class="about__logos"
+                    title="MongoDB"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -202,8 +229,8 @@
         <div class="projects-section__heading-wrapper">
           <h2 class="projects-section__heading">Projects</h2>
           <p class="projects-section__subhead">
-            Along with designing and developing this Personal Website, here are
-            other projects that I have worked on.
+            Along with this Personal Website, here are other projects that I
+            have worked on.
           </p>
         </div>
         <!-------------------------->
@@ -325,8 +352,49 @@
           oppurtunity to utilise my skills and learn more about the world of Web
           Development. If you see any potential in my work, Please get in touch!
         </p>
-        <form class="contact__form">Form Here</form>
-        <p class="contact__cv-text">You can also find me on</p>
+        <div class="contact__form-container">
+          <form action="#" class="contact__form" netlify>
+            <h3 class="contact__form-heading">Message me</h3>
+            <div class="contact__form-group">
+              <label for="name" class="contact__form-label">Test</label>
+              <input
+                type="text"
+                id="name"
+                placeholder="Your Name"
+                class="contact__form-input"
+                required
+              />
+            </div>
+            <div class="contact__form-group">
+              <label for="email" class="contact__form-label">Test</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Email address"
+                class="contact__form-input"
+                required
+              />
+            </div>
+            <div class="contact__form-group">
+              <label for="textarea" class="contact__form-label">Test</label>
+              <textarea
+                type="text"
+                name="textarea"
+                placeholder="Write your message here..."
+                class="contact__form-input contact__form-textarea"
+                maxlength="255"
+                rows="5"
+                cols="23"
+                required
+              ></textarea>
+            </div>
+            <button class="contact__form-btn" type="submit">Send</button>
+          </form>
+
+          <div class="contact-img"></div>
+        </div>
+        <!--  -->
+        <p class="contact__cv-text">You can find me on</p>
         <div class="contact__social-wrapper">
           <a href="https://www.linkedin.com/in/jcasia/" target="_blank"
             ><i class="fa-brands fa-linkedin contact__social-wrapper-link"></i

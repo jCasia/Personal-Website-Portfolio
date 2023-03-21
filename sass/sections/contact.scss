@@ -40,6 +40,7 @@
         color: $color-light-brown;
       }
     }
+
     @include flex;
     gap: 40px;
 
@@ -51,5 +52,82 @@
         filter: brightness(100%);
       }
     }
+  }
+
+  &__form-container {
+    background-color: $color-darker-white;
+    min-width: 750px;
+    padding: 20px;
+    box-shadow: $box-shadow;
+    border-radius: 15px;
+    margin: 10px 0;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "img form";
+  }
+
+  &__form {
+    grid-area: form;
+
+    gap: 5px;
+
+    &-heading {
+      font-size: 2.2rem;
+      font-weight: 500;
+    }
+
+    &-group {
+      @include flex-column;
+    }
+
+    &-label {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    &-input {
+      font-family: $font-voll;
+      color: $color-black-grey;
+      font-size: 1.5rem;
+
+      background-color: $color-grey-white;
+      padding: 10px 12.5px;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+      border-bottom: 2px solid transparent;
+      width: 100%;
+      transition: all 0.3s;
+
+      &:focus {
+        border-bottom: 2px solid $color-brown;
+      }
+    }
+
+    &-textarea {
+      resize: none;
+      margin-bottom: 15px;
+    }
+
+    &-btn {
+      @include button;
+
+      border: none;
+      width: 50%;
+
+      &:hover {
+        @include hoverUp;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &-img {
+    grid-area: img;
+    background-image: url("../../images/phone-mail.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 }

@@ -34,7 +34,7 @@ const botHeading = document.querySelector(".bot-heading");
 const navLinks = document.querySelectorAll(".header__link");
 const logo = document.querySelector(".header__logo");
 const heroImg = document.querySelector(".hero__img");
-const arrow = document.querySelector(".arrow");
+const arrow = document.querySelector(".hero__arrow");
 const heroSection = document.querySelector(".hero-section");
 
 const revealAnimation = () => {

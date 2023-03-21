@@ -41,7 +41,7 @@
     max-width: 450px;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 6px 10px rgba($color-brown, 0.25);
+    box-shadow: $box-shadow;
     background-color: $color-darker-white;
 
     display: grid;
