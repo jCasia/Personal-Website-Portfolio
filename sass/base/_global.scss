@@ -20,3 +20,9 @@ body {
   max-width: 1920px;
   margin: 0 auto;
 }
+
+.section-content,
+.project-left,
+.project-right {
+  visibility: hidden;
+}

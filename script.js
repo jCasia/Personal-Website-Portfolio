@@ -1,15 +1,13 @@
 "use strict";
 
-// Reload, Back to the top of the screen
-// window.addEventListener("beforeunload", () => {
-//   window.scrollTo(0, 0);
-// });
+//RELOAD BACK TO THE TOP
+window.addEventListener("beforeunload", () => {
+  window.scrollTo(0, 0);
+});
 
-// Sticky Navigation
+//STICKY NAVIGATION
 const header = document.querySelector(".header");
-console.log(header);
 const hero = document.querySelector(".hero");
-console.log(hero);
 
 const observer = new IntersectionObserver(
   function (entries) {
@@ -28,7 +26,21 @@ const observer = new IntersectionObserver(
 
 observer.observe(hero);
 
-//Hero Animation
+//NAVIGATION SCROLLTO USING EVENT DELEGATION
+
+const linksParent = document.querySelector(".header-nav__list");
+console.log(linksParent);
+
+linksParent.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  if (event.target.classList.contains("header__link")) {
+    const targetName = event.target.getAttribute("href");
+    gsap.to(window, { duration: 0.75, scrollTo: `${targetName}` });
+  }
+});
+
+//HERO ANIMATION
 const topHeading = document.querySelector(".top-heading");
 const botHeading = document.querySelector(".bot-heading");
 const navLinks = document.querySelectorAll(".header__link");
@@ -70,7 +82,7 @@ const revealAnimation = () => {
 
 window.addEventListener("load", revealAnimation);
 
-//Box Animation
+//BOX REVEAL
 
 const box = document.querySelector(".box");
 const tools = document.querySelector(".toggle-wrapper");
@@ -88,3 +100,52 @@ const boxReveal = () => {
 };
 
 box.addEventListener("click", boxReveal);
+
+// SCROLL TRIGGERS
+
+const sectionContents = document.querySelectorAll(".section-content");
+const projects = document.querySelectorAll(".project");
+
+sectionContents.forEach((section) => {
+  gsap.from(section, {
+    autoAlpha: 0,
+    duration: 1.5,
+    y: 20,
+    scale: 0.85,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: section,
+      start: "top 75%",
+      end: "bottom top",
+      toggleActions: "play reverse play reverse",
+    },
+  });
+});
+
+projects.forEach((project, index) => {
+  if (index % 2) {
+    gsap.from(project, {
+      autoAlpha: 0,
+      duration: 1,
+      x: 50,
+      scrollTrigger: {
+        trigger: project,
+        start: "top 75%",
+        end: "bottom top",
+        toggleActions: "play reverse play reverse",
+      },
+    });
+  } else {
+    gsap.from(project, {
+      autoAlpha: 0,
+      duration: 1,
+      x: -50,
+      scrollTrigger: {
+        trigger: project,
+        start: "top 75%",
+        end: "bottom top",
+        toggleActions: "play reverse play reverse",
+      },
+    });
+  }
+});

@@ -115,10 +115,16 @@
 
       border: none;
       width: 50%;
+      font-family: inherit;
 
       &:hover {
         @include hoverUp;
+        background-color: $color-light-brown;
         cursor: pointer;
+      }
+
+      &:active {
+        transform: translateY(0);
       }
     }
   }
