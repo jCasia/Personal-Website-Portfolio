@@ -3,10 +3,18 @@
   background-size: cover;
   background-repeat: no-repeat;
 
+  @include responsive(medium-laptop) {
+    background-image: url("../../images/background-mobile-project.svg");
+  }
+
   @include flex-column;
   gap: 50px;
 
   padding: 60px 0;
+
+  @include responsive(tablet) {
+    padding: 60px 20px;
+  }
 
   &__heading-wrapper {
     @include flex-column;
@@ -20,7 +28,7 @@
   &__subhead {
     font-size: 1.95rem;
     font-family: $font-voll;
-
+    text-align: center;
     font-style: italic;
   }
 }
@@ -37,12 +45,26 @@
     "project-1 project-2"
     "project-3 project-4";
 
+  @include responsive(medium-laptop) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      "project-1"
+      "project-2"
+      "project-3"
+      "project-4";
+  }
+
   &__card {
     max-width: 450px;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: $box-shadow;
     background-color: $color-darker-white;
+
+    @include responsive(medium-laptop) {
+      max-width: 500px;
+    }
 
     display: grid;
     grid-template-columns: 1fr;

@@ -4,16 +4,26 @@
   background-repeat: no-repeat;
   background-size: cover;
   clip-path: circle(0% at 35% 30%);
+
+  @include responsive(tablet) {
+    background-image: url("../../images/background-mobile-hero.svg");
+    clip-path: circle(0% at 100% 50%);
+  }
 }
 
 .hero {
   @include flex-column;
-
+  @include responsive(large-desktop) {
+    gap: 12.5px;
+  }
   min-height: 100vh;
   padding: 125px 0 100px 0;
 
   &__img {
     height: 350px;
+    @include responsive(large-desktop) {
+      height: 425px;
+    }
 
     visibility: hidden;
   }
@@ -22,6 +32,9 @@
     font-size: 5rem;
     font-family: $font-voll;
     color: $color-black-grey;
+    @include responsive(large-desktop) {
+      font-size: 6rem;
+    }
 
     visibility: hidden;
   }
@@ -30,5 +43,8 @@
     font-size: 4rem;
     color: $color-grey;
     visibility: hidden;
+    @include responsive(large-desktop) {
+      font-size: 6rem;
+    }
   }
 }

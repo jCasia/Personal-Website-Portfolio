@@ -1,9 +1,9 @@
 "use strict";
 
 //RELOAD BACK TO THE TOP
-window.addEventListener("beforeunload", () => {
-  window.scrollTo(0, 0);
-});
+// window.addEventListener("beforeunload", () => {
+//   window.scrollTo(0, 0);
+// });
 
 //STICKY NAVIGATION
 const header = document.querySelector(".header");

@@ -1,3 +1,27 @@
+@mixin responsive($breakpoint) {
+  @if $breakpoint == medium-laptop {
+    @media only screen and (max-width: 1050px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tablet {
+    @media only screen and (max-width: 768px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet2 {
+    @media only screen and (max-width: 670px) {
+      @content;
+    }
+  }
+  @if $breakpoint == large-desktop {
+    @media only screen and (min-width: 1700px) {
+      @content;
+    }
+  }
+}
+
 @mixin flex {
   display: flex;
   align-items: center;
