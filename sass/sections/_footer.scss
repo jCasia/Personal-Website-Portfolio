@@ -5,6 +5,12 @@
 
   gap: 20px;
 
+  @include responsive(tablet-bp-4) {
+    flex-direction: column;
+    text-align: center;
+    gap: 0;
+  }
+
   &__copyright {
     color: $color-grey-white;
   }

@@ -52,12 +52,19 @@
               >
             </li>
             <li>
-              <a href="#contact" class="header__link" aria-label="contact"
+              <a
+                href="#contact"
+                class="header__link header__link-cta"
+                aria-label="contact"
                 >Contact</a
               >
             </li>
           </ul>
         </nav>
+
+        <button class="mobile-nav-btn">
+          <i class="fa-solid fa-bars mobile-nav-icon"></i>
+        </button>
       </header>
       <!-- Hero Section -->
       <section class="hero-section" id="home">
@@ -82,18 +89,17 @@
         <div class="about__content section-content">
           <h2 class="about__content-header">A little bit about myself</h2>
           <p class="about__content-text">
-            I'm a <strong>Maths Graduate</strong> who has a newly found desire
-            to become a Web Developer. I was very curious on how websites and
-            apps were made which ultimately led me to teach myself coding. I
-            love the way I was able to express my creative side by writing
-            strange yet wonderful codes.
+            I was very curious on how websites and apps were created which
+            ultimately led me to teach myself coding. I love the way I was able
+            to express my creative side by writing strange yet wonderful codes.
           </p>
           <p class="about__content-text">
             I have been passionately learning and improving everday since I
-            started my journey using various different learning platforms
-            online. Currently, I am trying to improve my skills with
-            <strong>React.js</strong> while making different projects along the
-            way and will soon be learning <strong>TypeScript</strong>.
+            started my journey, creating responsive and dynamic websites that
+            offers a smooth user experience while also implementing levels of
+            accessibility. I am currently improving my skills with
+            <strong>React.js</strong> and will soon be learning
+            <strong>TypeScript</strong>.
           </p>
         </div>
         <div class="about__skills">
@@ -109,7 +115,7 @@
               <figure>
                 <img
                   src="./images/html.svg"
-                  alt=""
+                  alt="HTML logo"
                   class="about__logos"
                   title="HTML5"
                 />
@@ -117,7 +123,7 @@
               <figure>
                 <img
                   src="./images/css.svg"
-                  alt=""
+                  alt="CSS logo"
                   class="about__logos"
                   title="CSS3"
                 />
@@ -125,7 +131,7 @@
               <figure>
                 <img
                   src="./images/js.svg"
-                  alt=""
+                  alt="JavaScript logo"
                   class="about__logos"
                   title="JavaScript"
                 />
@@ -133,7 +139,7 @@
               <figure>
                 <img
                   src="./images/sass.svg"
-                  alt=""
+                  alt="Sass logo"
                   class="about__logos"
                   title="Sass"
                 />
@@ -141,7 +147,7 @@
               <figure>
                 <img
                   src="./images/gsap.svg"
-                  alt=""
+                  alt="Gsap logo"
                   class="about__logos"
                   title="Gsap"
                 />
@@ -149,7 +155,7 @@
               <figure>
                 <img
                   src="./images/react.svg"
-                  alt=""
+                  alt="React logo"
                   class="about__logos"
                   title="React.js"
                 />
@@ -157,7 +163,7 @@
               <figure>
                 <img
                   src="./images/figma.svg"
-                  alt=""
+                  alt="Figma logo"
                   class="about__logos"
                   title="Figma"
                 />
@@ -165,7 +171,7 @@
               <figure>
                 <img
                   src="./images/git.svg"
-                  alt=""
+                  alt="git logo"
                   class="about__logos"
                   title="git"
                 />
@@ -177,7 +183,7 @@
                 <div class="logo-container">
                   <img
                     src="./images/ts.svg"
-                    alt=""
+                    alt="TypeScript logo"
                     class="about__logos"
                     title="TypeScript"
                   />
@@ -185,7 +191,7 @@
                 <div class="logo-container">
                   <img
                     src="./images/angular.svg"
-                    alt=""
+                    alt="Angular logo"
                     class="about__logos"
                     title="Angular"
                   />
@@ -193,7 +199,7 @@
                 <div class="logo-container">
                   <img
                     src="./images/threejs.svg"
-                    alt=""
+                    alt="Three.js logo"
                     class="about__logos"
                     title="three.js"
                   />
@@ -201,7 +207,7 @@
                 <div class="logo-container">
                   <img
                     src="./images/nodejs.svg"
-                    alt=""
+                    alt="node.js logo"
                     class="about__logos"
                     title="node.js"
                   />
@@ -209,7 +215,7 @@
                 <div class="logo-container">
                   <img
                     src="./images/express.svg"
-                    alt=""
+                    alt="express.js logo"
                     class="about__logos"
                     title="Express.js"
                   />
@@ -217,7 +223,7 @@
                 <div class="logo-container">
                   <img
                     src="./images/mongodb.svg"
-                    alt=""
+                    alt="mongodb logo"
                     class="about__logos"
                     title="MongoDB"
                   />
@@ -226,7 +232,7 @@
             </div>
           </div>
           <div class="about__skills-box-content">
-            <i class="fa-solid fa-box about__box-close box"></i>
+            <i class="fa-solid fa-box about__box-close box" tabindex="0"></i>
             <span class="about__skills-text">My Toolbox</span>
           </div>
         </div>
@@ -244,7 +250,13 @@
         <!-------------------------->
         <div class="projects">
           <div class="projects__card projects__card-1 project">
-            <div class="projects__card-img projects__card-img1"></div>
+            <div class="projects__card-img">
+              <img
+                src="./images/sunnyside-desktop.png"
+                alt=""
+                class="projects__card-img1"
+              />
+            </div>
             <div class="projects__card-content">
               <h3 class="projects__card-heading">SunnySide Landing Page</h3>
               <p class="projects__card-summary">
@@ -261,7 +273,7 @@
                 >
                   Preview Link
                   <i
-                    class="fa-sharp fa-solid fa-arrow-up-right-from-square"
+                    class="fa-sharp fa-solid fa-arrow-up-right-from-square projects-arrow-logo"
                   ></i>
                 </a>
                 <a
@@ -270,7 +282,7 @@
                   class="projects__link-wrapper-github"
                 >
                   View Code
-                  <i class="fa-brands fa-github"></i>
+                  <i class="fa-brands fa-github projects-github-logo"></i>
                 </a>
               </div>
             </div>
@@ -289,12 +301,12 @@
                 <a href="#" class="projects__link-wrapper-live">
                   Preview Link
                   <i
-                    class="fa-sharp fa-solid fa-arrow-up-right-from-square"
+                    class="fa-sharp fa-solid fa-arrow-up-right-from-square projects-arrow-logo"
                   ></i>
                 </a>
                 <a href="#" class="projects__link-wrapper-github">
                   View Code
-                  <i class="fa-brands fa-github"></i>
+                  <i class="fa-brands fa-github projects-github-logo"></i>
                 </a>
               </div>
             </div>
@@ -308,12 +320,12 @@
                 <a href="#" class="projects__link-wrapper-live">
                   Preview Link
                   <i
-                    class="fa-sharp fa-solid fa-arrow-up-right-from-square"
+                    class="fa-sharp fa-solid fa-arrow-up-right-from-square projects-arrow-logo"
                   ></i>
                 </a>
                 <a href="#" class="projects__link-wrapper-github">
                   View Code
-                  <i class="fa-brands fa-github"></i>
+                  <i class="fa-brands fa-github projects-github-logo"></i>
                 </a>
               </div>
             </div>
@@ -413,7 +425,9 @@
             <button class="contact__form-btn" type="submit">Send</button>
           </form>
 
-          <div class="contact-img"></div>
+          <div class="contact-img-container">
+            <img src="./images/phone-mail.svg" alt="" class="contact-img" />
+          </div>
         </div>
         <!--  -->
         <p class="contact__cv-text">You can find me on</p>

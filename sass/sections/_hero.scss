@@ -5,7 +5,7 @@
   background-size: cover;
   clip-path: circle(0% at 35% 30%);
 
-  @include responsive(tablet) {
+  @include responsive(tablet-bp-1) {
     background-image: url("../../images/background-mobile-hero.svg");
     clip-path: circle(0% at 100% 50%);
   }
@@ -19,10 +19,23 @@
   min-height: 100vh;
   padding: 125px 0 100px 0;
 
+  @include responsive(tablet-bp-1) {
+    gap: 10px;
+    padding: 125px 30px 100px 30px;
+  }
+
+  @include responsive(mobile-large) {
+    padding: 125px 20px 100px 20px;
+  }
+
   &__img {
     height: 350px;
     @include responsive(large-desktop) {
       height: 425px;
+    }
+
+    @include responsive(mobile-large) {
+      height: 275px;
     }
 
     visibility: hidden;
@@ -32,10 +45,22 @@
     font-size: 5rem;
     font-family: $font-voll;
     color: $color-black-grey;
+    text-align: center;
+
     @include responsive(large-desktop) {
       font-size: 6rem;
     }
+    @include responsive(tablet-bp-1) {
+      font-size: 4.5rem;
+    }
 
+    @include responsive(tablet-bp-2) {
+      font-size: 4rem;
+    }
+
+    @include responsive(tablet-bp-4) {
+      font-size: 3.25rem;
+    }
     visibility: hidden;
   }
 
@@ -45,6 +70,9 @@
     visibility: hidden;
     @include responsive(large-desktop) {
       font-size: 6rem;
+    }
+    @include responsive(tablet-bp-2) {
+      font-size: 4.5rem;
     }
   }
 }

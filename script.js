@@ -5,45 +5,11 @@
 //   window.scrollTo(0, 0);
 // });
 
-//STICKY NAVIGATION
-const header = document.querySelector(".header");
-const hero = document.querySelector(".hero");
-
-const observer = new IntersectionObserver(
-  function (entries) {
-    if (!entries[0].isIntersecting) {
-      header.classList.add("observe-scroll");
-    } else {
-      header.classList.remove("observe-scroll");
-    }
-  },
-  {
-    root: null,
-    threshold: 0,
-    rootMargin: "-200px",
-  }
-);
-
-observer.observe(hero);
-
-//NAVIGATION SCROLLTO USING EVENT DELEGATION
-
-const linksParent = document.querySelector(".header-nav__list");
-console.log(linksParent);
-
-linksParent.addEventListener("click", (event) => {
-  event.preventDefault();
-
-  if (event.target.classList.contains("header__link")) {
-    const targetName = event.target.getAttribute("href");
-    gsap.to(window, { duration: 0.75, scrollTo: `${targetName}` });
-  }
-});
-
 //HERO ANIMATION
 const topHeading = document.querySelector(".top-heading");
 const botHeading = document.querySelector(".bot-heading");
 const navLinks = document.querySelectorAll(".header__link");
+const mobileBtn = document.querySelector(".mobile-nav-btn");
 const logo = document.querySelector(".header__logo");
 const heroImg = document.querySelector(".hero__img");
 const arrow = document.querySelector(".hero__arrow");
@@ -77,18 +43,73 @@ const revealAnimation = () => {
       { autoAlpha: 0, y: -50, duration: 0.5, stagger: 0.1 },
       "-=0.25"
     )
-    .from(logo, { autoAlpha: 0, y: -50 }, "<");
+    .from(logo, { autoAlpha: 0, y: -50 }, "<")
+    .from(mobileBtn, { autoAlpha: 0, y: -50 }, "<");
 };
 
 window.addEventListener("load", revealAnimation);
 
-//BOX REVEAL
+//STICKY NAVIGATION
+const header = document.querySelector(".header");
+const hero = document.querySelector(".hero");
+
+const observer = new IntersectionObserver(
+  function (entries) {
+    if (!entries[0].isIntersecting) {
+      header.classList.add("observe-scroll");
+    } else {
+      header.classList.remove("observe-scroll");
+    }
+  },
+  {
+    root: null,
+    threshold: 0,
+    rootMargin: "-200px",
+  }
+);
+
+observer.observe(hero);
+
+//MOBILE NAVIGATION
+const navLinksContainer = document.querySelector(".header-nav");
+const mobileBtnIcon = document.querySelector(".mobile-nav-icon");
+
+const openNav = () => {
+  navLinksContainer.classList.toggle("header-nav-open");
+
+  if (navLinksContainer.classList.contains("header-nav-open")) {
+    mobileBtnIcon.classList.replace("fa-bars", "fa-xmark");
+  } else {
+    mobileBtnIcon.classList.replace("fa-xmark", "fa-bars");
+  }
+};
+
+mobileBtn.addEventListener("click", openNav);
+
+//NAVIGATION SCROLLTO USING EVENT DELEGATION
+
+const linksParent = document.querySelector(".header-nav__list");
+console.log(linksParent);
+
+linksParent.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  if (event.target.classList.contains("header__link")) {
+    navLinksContainer.classList.remove("header-nav-open");
+    mobileBtnIcon.classList.replace("fa-xmark", "fa-bars");
+
+    const targetName = event.target.getAttribute("href");
+    gsap.to(window, { duration: 0.75, scrollTo: `${targetName}` });
+  }
+});
+
+//BOX REVEALS
 
 const box = document.querySelector(".box");
 const tools = document.querySelector(".toggle-wrapper");
 const curlyArrow = document.querySelector(".curly-arrow");
 
-const boxReveal = () => {
+const toggle = () => {
   tools.classList.toggle("box-toggle");
   curlyArrow.classList.toggle("hide");
 
@@ -99,7 +120,18 @@ const boxReveal = () => {
   }
 };
 
+const boxReveal = () => {
+  toggle();
+};
+
+const boxRevealKeyPress = (e) => {
+  if (e.key === "Enter") {
+    toggle();
+  }
+};
+
 box.addEventListener("click", boxReveal);
+box.addEventListener("keydown", boxRevealKeyPress);
 
 // SCROLL TRIGGERS
 
@@ -127,7 +159,7 @@ projects.forEach((project, index) => {
     gsap.from(project, {
       autoAlpha: 0,
       duration: 1,
-      x: 50,
+      x: 20,
       scrollTrigger: {
         trigger: project,
         start: "top 75%",
@@ -139,7 +171,7 @@ projects.forEach((project, index) => {
     gsap.from(project, {
       autoAlpha: 0,
       duration: 1,
-      x: -50,
+      x: -20,
       scrollTrigger: {
         trigger: project,
         start: "top 75%",

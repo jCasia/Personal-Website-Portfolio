@@ -5,15 +5,24 @@
 
   padding: 60px 0;
   background-color: $color-grey-white;
-  @include responsive(tablet) {
+
+  @include responsive(medium-laptop) {
     padding: 60px 20px;
     gap: 15px;
+  }
+
+  @include responsive(mobile-large) {
+    padding: 35px 20px;
   }
 
   &__heading {
     @include sectionHeading;
 
     margin-bottom: 20px;
+
+    @include responsive(tablet-bp-1) {
+      margin-bottom: 0;
+    }
   }
 
   &__cv-text {
@@ -26,6 +35,10 @@
     @include button;
     font-size: 1.95rem;
     padding: 9.5px 40px;
+
+    @include responsive(tablet-bp-1) {
+      font-size: 1.6rem;
+    }
   }
 
   &__link:hover,
@@ -61,6 +74,7 @@
   &__form-container {
     background-color: $color-darker-white;
     width: 750px;
+
     box-shadow: $box-shadow;
     border-radius: 15px;
     margin: 10px 0;
@@ -69,14 +83,18 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "img form";
 
-    @include responsive(tablet) {
+    @include responsive(tablet-bp-1) {
       grid-template-columns: 1fr;
-      grid-template-rows: repeat(2, 1fr);
+      grid-template-rows: 0.4fr 0.6fr;
       grid-template-areas:
         "img"
         "form";
 
-      max-width: 450px;
+      width: 450px;
+    }
+
+    @include responsive(tablet-bp-4) {
+      width: 100%;
     }
   }
 
@@ -89,6 +107,9 @@
     &-heading {
       font-size: 2.2rem;
       font-weight: 500;
+      @include responsive(mobile-large) {
+        font-size: 1.7rem;
+      }
     }
 
     &-group {
@@ -114,6 +135,10 @@
       width: 100%;
       transition: all 0.3s;
 
+      @include responsive(mobile-large) {
+        font-size: 1.15rem;
+      }
+
       &:focus {
         border-bottom: 2px solid $color-brown;
       }
@@ -131,7 +156,7 @@
       width: 50%;
       font-family: inherit;
 
-      @include responsive(tablet) {
+      @include responsive(tablet-bp-1) {
         padding: 10px 13px;
       }
 
@@ -147,11 +172,15 @@
     }
   }
 
+  &-img-container {
+    @include flex;
+  }
+
   &-img {
-    grid-area: img;
-    background-image: url("../../images/phone-mail.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 0% 10%;
+    max-width: 100%;
+
+    @include responsive(tablet-bp-1) {
+      max-width: 70%;
+    }
   }
 }

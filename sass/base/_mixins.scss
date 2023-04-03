@@ -4,14 +4,34 @@
       @content;
     }
   }
-  @if $breakpoint == tablet {
-    @media only screen and (max-width: 768px) {
+  @if $breakpoint == tablet-bp-1 {
+    @media only screen and (max-width: 800px) {
       @content;
     }
   }
 
-  @if $breakpoint == tablet2 {
-    @media only screen and (max-width: 670px) {
+  @if $breakpoint == tablet-bp-2 {
+    @media only screen and (max-width: 700px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tablet-bp-3 {
+    @media only screen and (max-width: 610px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tablet-bp-4 {
+    @media only screen and (max-width: 500px) {
+      @content;
+    }
+  }
+  @if $breakpoint == mobile-large {
+    @media only screen and (max-width: 425px) {
+      @content;
+    }
+  }
+  @if $breakpoint == mobile-medium {
+    @media only screen and (max-width: 375px) {
       @content;
     }
   }
@@ -40,7 +60,7 @@
   text-decoration: none;
   color: $color-pure-white;
   padding: 7.5px 13px;
-  border-radius: 20px;
+  border-radius: 10px;
   box-shadow: 0 4px 7.5px rgba($color-brown, 0.35);
   background-color: $color-brown;
   transition: all 0.3s;
@@ -50,12 +70,36 @@
   font-size: 4rem;
   text-transform: capitalize;
   font-weight: 500;
+  color: $color-dark-brown;
+  @include responsive(tablet-bp-1) {
+    font-size: 3rem;
+  }
+
+  @include responsive(tablet-bp-4) {
+    font-size: 2.5rem;
+  }
+
+  @include responsive(mobile-large) {
+    font-size: 2.2rem;
+  }
 }
 
 @mixin sectionText {
   font-size: 1.95rem;
   font-family: $font-voll;
   line-height: 2;
+
+  @include responsive(tablet-bp-1) {
+    font-size: 1.75rem;
+  }
+
+  @include responsive(tablet-bp-4) {
+    font-size: 1.5rem;
+  }
+
+  @include responsive(mobile-large) {
+    font-size: 1.25rem;
+  }
 }
 
 @mixin hoverUp {

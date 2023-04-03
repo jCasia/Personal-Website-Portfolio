@@ -6,6 +6,10 @@
   padding: 60px 40px;
   background-color: $color-grey-white;
 
+  @include responsive(mobile-large) {
+    padding: 30px 20px;
+  }
+
   &__content {
     grid-area: content;
 
@@ -19,8 +23,7 @@
     }
 
     &-text {
-      font-size: 1.95rem;
-      font-family: $font-voll;
+      @include sectionText;
       line-height: 2;
     }
   }
@@ -31,11 +34,16 @@
     @include flex-column;
     gap: 50px;
 
+    @include responsive(tablet-bp-1) {
+      gap: 30px;
+    }
+
     position: relative;
 
     &-tools {
-      display: flex;
+      @include flex;
       gap: 20px;
+      flex-wrap: wrap;
     }
 
     &-box-content {
@@ -45,6 +53,10 @@
     &-text {
       font-size: 1.85rem;
       font-weight: 600;
+
+      @include responsive(mobile-large) {
+        font-size: 1.5rem;
+      }
     }
   }
 
@@ -55,6 +67,7 @@
     &-container {
       @include flex;
       gap: 20px;
+      flex-wrap: wrap;
     }
     &-text {
       font-size: 1.5rem;
@@ -64,6 +77,10 @@
   &__logos {
     width: 60px;
     height: 60px;
+
+    @include responsive(mobile-large) {
+      width: 45px;
+    }
   }
 
   &__box-close,
@@ -123,6 +140,20 @@ strong {
   position: absolute;
   transform: translate(-120px, -10px);
   transition: all 0.3s;
+
+  @include responsive(tablet-bp-1) {
+    transform: translate(-120px, 20px);
+  }
+
+  @include responsive(tablet-bp-3) {
+    transform: translate(-120px, 55px);
+    // max-width: 250px;
+  }
+
+  @include responsive(mobile-large) {
+    transform: translate(-100px, 100px);
+    max-width: 150px;
+  }
 }
 
 .hide {
