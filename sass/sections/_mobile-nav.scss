@@ -18,4 +18,7 @@
   @include responsive(tablet-bp-4) {
     font-size: 3rem;
   }
+  @include responsive(mobile-large) {
+    font-size: 2.5rem;
+  }
 }

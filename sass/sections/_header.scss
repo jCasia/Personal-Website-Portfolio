@@ -23,6 +23,9 @@
     @include responsive(tablet-bp-1) {
       max-width: 50%;
     }
+    @include responsive(mobile-large) {
+      max-width: 40%;
+    }
   }
 
   &-nav {

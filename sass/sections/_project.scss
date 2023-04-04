@@ -46,7 +46,8 @@
   gap: 40px;
   grid-template-areas:
     "project-1 project-2"
-    "project-3 project-4";
+    "project-3 project-4"
+    "project-5 project-5";
 
   @include responsive(medium-laptop) {
     grid-template-columns: 1fr;
@@ -55,7 +56,8 @@
       "project-1"
       "project-2"
       "project-3"
-      "project-4";
+      "project-4"
+      "project-5";
   }
 
   &__card {
@@ -84,26 +86,29 @@
     &-4 {
       grid-area: project-4;
     }
+    &-5 {
+      grid-area: project-5;
+      justify-self: center;
+    }
 
     &-img {
       grid-area: img;
     }
 
-    &-img1 {
+    &-img1,
+    &-img2,
+    &-img3,
+    &-img4 {
       object-fit: cover;
       max-width: 100%;
       height: 100%;
     }
-    // &-img2 {
-    // }
-    // &-img3 {
-    // }
 
-    &-img-wrapper-4 {
+    &-img-wrapper-5 {
       @include flex;
     }
 
-    &-img4 {
+    &-img5 {
       max-width: 70%;
     }
 
