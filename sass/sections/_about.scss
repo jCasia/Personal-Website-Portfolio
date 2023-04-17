@@ -151,7 +151,7 @@ strong {
   }
 
   @include responsive(mobile-large) {
-    transform: translate(-100px, 100px);
+    transform: translate(-85px, 100px);
     max-width: 150px;
   }
 }
