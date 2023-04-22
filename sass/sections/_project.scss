@@ -1,10 +1,10 @@
 .projects-section {
-  background-image: url("../../images/background-project.svg");
+  background-image: url('../../images/background-project.svg');
   background-size: cover;
   background-repeat: no-repeat;
 
   @include responsive(medium-laptop) {
-    background-image: url("../../images/background-mobile-project.svg");
+    background-image: url('../../images/background-mobile-project.svg');
   }
 
   @include flex-column;
@@ -44,19 +44,19 @@
   grid-template-rows: repeat(2, 1fr);
   gap: 40px;
   grid-template-areas:
-    "project-1 project-2"
-    "project-3 project-4"
-    "project-5 project-5";
+    'project-1 project-2'
+    'project-3 project-4'
+    'project-5 project-5';
 
   @include responsive(medium-laptop) {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr);
     grid-template-areas:
-      "project-1"
-      "project-2"
-      "project-3"
-      "project-4"
-      "project-5";
+      'project-1'
+      'project-2'
+      'project-3'
+      'project-4'
+      'project-5';
   }
 
   &__card {
@@ -70,8 +70,8 @@
     grid-template-columns: 1fr;
     grid-template-rows: 0.4fr 0.6fr;
     grid-template-areas:
-      "img"
-      "cont";
+      'img'
+      'cont';
 
     &-1 {
       grid-area: project-1;

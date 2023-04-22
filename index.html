@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="My Personal Website, I'm Jethier, A Junior Front-End Developer"
+    />
+    <meta name="author" content="Jethier Casiano" />
     <title>Jethier Casiano</title>
     <link rel="icon" href="./images/favicon.ico" />
     <link href="css/style.css" rel="stylesheet" />
@@ -62,7 +67,7 @@
           </ul>
         </nav>
 
-        <button class="mobile-nav-btn">
+        <button class="mobile-nav-btn" aria-label="mobile navigation">
           <i class="fa-solid fa-bars mobile-nav-icon"></i>
         </button>
       </header>
@@ -78,7 +83,7 @@
               role="presentation"
             />
           </div>
-          <h1 class="hero__heading bot-heading">Junior Front End Developer</h1>
+          <h1 class="hero__heading bot-heading">Junior Front-End Developer</h1>
           <i
             class="fa-solid fa-angles-down hero__arrow"
             role="presentation"
@@ -109,77 +114,85 @@
         <div class="about__skills">
           <img
             src="./images/curly-arrow.svg"
-            alt=""
+            alt="arrow"
             role="presentation"
             class="curly-arrow"
           />
           <div class="toggle-wrapper">
             <div class="down-triangle"></div>
             <div class="about__skills-tools">
-              <figure>
+              <div class="logo-container">
                 <img
                   src="./images/html.svg"
                   alt="HTML logo"
                   class="about__logos"
                   title="HTML5"
+                  role="presentation"
                 />
-              </figure>
-              <figure>
+              </div>
+              <div class="logo-container">
                 <img
                   src="./images/css.svg"
                   alt="CSS logo"
                   class="about__logos"
                   title="CSS3"
+                  role="presentation"
                 />
-              </figure>
-              <figure>
+              </div>
+              <div class="logo-container">
                 <img
                   src="./images/js.svg"
                   alt="JavaScript logo"
                   class="about__logos"
                   title="JavaScript"
+                  role="presentation"
                 />
-              </figure>
-              <figure>
+              </div>
+              <div class="logo-container">
                 <img
                   src="./images/sass.svg"
                   alt="Sass logo"
                   class="about__logos"
                   title="Sass"
+                  role="presentation"
                 />
-              </figure>
-              <figure>
+              </div>
+              <div class="logo-container">
                 <img
                   src="./images/gsap.svg"
                   alt="Gsap logo"
                   class="about__logos"
                   title="Gsap"
+                  role="presentation"
                 />
-              </figure>
-              <figure>
+              </div>
+              <div class="logo-container">
                 <img
                   src="./images/react.svg"
                   alt="React logo"
                   class="about__logos"
                   title="React.js"
+                  role="presentation"
                 />
-              </figure>
-              <figure>
+              </div>
+              <div class="logo-container">
                 <img
                   src="./images/figma.svg"
                   alt="Figma logo"
                   class="about__logos"
                   title="Figma"
+                  role="presentation"
                 />
-              </figure>
-              <figure>
+              </div>
+              <div class="logo-container">
                 <img
                   src="./images/git.svg"
                   alt="git logo"
                   class="about__logos"
                   title="git"
+                  role="presentation"
                 />
-              </figure>
+              </div>
             </div>
             <div class="about__soon">
               <p class="about__soon-text">Soon to be unlocked...</p>
@@ -190,6 +203,7 @@
                     alt="TypeScript logo"
                     class="about__logos"
                     title="TypeScript"
+                    role="presentation"
                   />
                 </div>
                 <div class="logo-container">
@@ -198,6 +212,7 @@
                     alt="Angular logo"
                     class="about__logos"
                     title="Angular"
+                    role="presentation"
                   />
                 </div>
                 <div class="logo-container">
@@ -206,6 +221,7 @@
                     alt="Three.js logo"
                     class="about__logos"
                     title="three.js"
+                    role="presentation"
                   />
                 </div>
                 <div class="logo-container">
@@ -214,6 +230,7 @@
                     alt="node.js logo"
                     class="about__logos"
                     title="node.js"
+                    role="presentation"
                   />
                 </div>
                 <div class="logo-container">
@@ -222,6 +239,7 @@
                     alt="express.js logo"
                     class="about__logos"
                     title="Express.js"
+                    role="presentation"
                   />
                 </div>
                 <div class="logo-container">
@@ -230,6 +248,7 @@
                     alt="mongodb logo"
                     class="about__logos"
                     title="MongoDB"
+                    role="presentation"
                   />
                 </div>
               </div>
@@ -248,7 +267,7 @@
           <h2 class="projects-section__heading">Projects</h2>
           <p class="projects-section__subhead">
             Along with this Personal Website, here are other projects that I
-            have worked on.
+            have worked on or will be working on.
           </p>
         </div>
         <!-------------------------->
@@ -262,12 +281,11 @@
               />
             </div>
             <div class="projects__card-content">
-              <h3 class="projects__card-heading">Project 1</h3>
+              <h3 class="projects__card-heading">SunnySide Landing Page</h3>
               <p class="projects__card-summary">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Numquam doloribus molestias ex in corrupti necessitatibus
-                voluptatum facere deleniti quaerat a eius placeat ad
-                dignissimos, voluptatibus, iure architecto commodi suscipit
+                I created this fully responsive project using Html, Sass &
+                JavaScript, The main purpose of this project was to practice my
+                skills with layouts using flexbox and grid.
               </p>
               <div class="projects__link-wrapper">
                 <a
@@ -294,18 +312,17 @@
           <div class="projects__card projects__card-2 project">
             <div class="projects__card-img">
               <img
-                src="./images/sunnyside-desktop.png"
-                alt=""
-                class="projects__card-img2"
+                src="./images/soon-img.png"
+                alt="sunnyside project preview"
+                class="projects__card-img1"
               />
             </div>
             <div class="projects__card-content">
-              <h3 class="projects__card-heading">Project 2</h3>
+              <h3 class="projects__card-heading">An Api Project using React</h3>
               <p class="projects__card-summary">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Numquam doloribus molestias ex in corrupti necessitatibus
-                voluptatum facere deleniti quaerat a eius placeat ad
-                dignissimos, voluptatibus, iure architecto commodi suscipit
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Laboriosam incidunt minus ipsum exercitationem sequi possimus
+                numquam ullam laborum odio error!
               </p>
               <div class="projects__link-wrapper">
                 <a href="#" class="projects__link-wrapper-live">
@@ -324,18 +341,18 @@
           <div class="projects__card projects__card-3 project">
             <div class="projects__card-img">
               <img
-                src="./images/sunnyside-desktop.png"
-                alt=""
-                class="projects__card-img3"
+                src="./images/soon-img.png"
+                alt="coming soon"
+                class="projects__card-img1"
               />
             </div>
             <div class="projects__card-content">
-              <h3 class="projects__card-heading">Project 3</h3>
+              <h3 class="projects__card-heading">
+                A React project using various hooks and state management
+              </h3>
               <p class="projects__card-summary">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Numquam doloribus molestias ex in corrupti necessitatibus
-                voluptatum facere deleniti quaerat a eius placeat ad
-                dignissimos, voluptatibus, iure architecto commodi suscipit
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Praesentium libero iste hic dolor cupiditate tempora
               </p>
               <div class="projects__link-wrapper">
                 <a href="#" class="projects__link-wrapper-live">
@@ -354,18 +371,18 @@
           <div class="projects__card projects__card-4 project">
             <div class="projects__card-img">
               <img
-                src="./images/sunnyside-desktop.png"
-                alt=""
-                class="projects__card-img4"
+                src="./images/soon-img.png"
+                alt="coming soon"
+                class="projects__card-img1"
               />
             </div>
             <div class="projects__card-content">
-              <h3 class="projects__card-heading">Project 4</h3>
+              <h3 class="projects__card-heading">
+                E-commerce product page using React
+              </h3>
               <p class="projects__card-summary">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Laborum, architecto quia! Officia praesentium ducimus et
-                tenetur? Modi fuga reprehenderit vero quidem sequi velit,
-                deserunt recusandae, perspiciatis molestias rerum ut alias.
+                Molestiae non doloribus fugit atque architecto perspiciatis
               </p>
               <div class="projects__link-wrapper">
                 <a href="#" class="projects__link-wrapper-live">
@@ -418,9 +435,9 @@
         <a href="#" class="contact__link">My CV</a>
         <p class="contact__cv-text">
           I still have a lot to learn and I am current looking for a job
-          oppurtunity where I will be able to utilise my skills and learn more
-          about the world of Web Development. If you see any potential in my
-          work, Please get in touch!
+          oppurtunity where I will be able to utilise my skills and I am very
+          eager to learn more. If you see any potential in my work, please get
+          in touch and let's have a chat!
         </p>
 
         <div class="contact__form-container section-content">
@@ -483,13 +500,22 @@
         <!--  -->
         <p class="contact__cv-text">You can find me on</p>
         <div class="contact__social-wrapper">
-          <a href="https://www.linkedin.com/in/jcasia/" target="_blank"
+          <a
+            href="https://www.linkedin.com/in/jcasia/"
+            target="_blank"
+            aria-label="linkedin"
             ><i class="fa-brands fa-linkedin contact__social-wrapper-link"></i
           ></a>
-          <a href="https://github.com/jCasia" target="_blank"
+          <a
+            href="https://github.com/jCasia"
+            target="_blank"
+            aria-label="github"
             ><i class="fa-brands fa-github contact__social-wrapper-link"></i
           ></a>
-          <a href="https://www.frontendmentor.io/profile/jCasia" target="_blank"
+          <a
+            href="https://www.frontendmentor.io/profile/jCasia"
+            target="_blank"
+            aria-label="frontend mentor"
             ><img
               src="./images/frontend-mentor.svg"
               alt=""
