@@ -1,12 +1,13 @@
-@import "./base/mixins";
-@import "./base/variables";
-@import "./base/typography";
-@import "./base/global";
+@import './base/mixins';
+@import './base/variables';
+@import './base/typography';
+@import './base/global';
 
-@import "./sections/mobile-nav.scss";
-@import "./sections/_header";
-@import "./sections/hero";
-@import "./sections/about";
-@import "./sections/project";
-@import "./sections/contact.scss";
-@import "./sections/footer.scss";
+@import './sections/mobile-nav.scss';
+@import './sections/_header';
+@import './sections/hero';
+@import './sections/about';
+@import './sections/project';
+@import './sections/contact.scss';
+@import './sections/footer.scss';
+@import './sections/success';
