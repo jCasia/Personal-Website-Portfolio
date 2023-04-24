@@ -451,10 +451,15 @@
             class="contact__form"
             name="contact"
             method="POST"
-            data-netlify-recaptcha="true"
+            netlify-honeypot="bot-field"
             netlify
           >
             <h3 class="contact__form-heading">Feel free to message me</h3>
+            <p class="hidden">
+              <label>
+                Don't fill this out if you're human: <input name="bot-field" />
+              </label>
+            </p>
             <div class="contact__form-group">
               <label for="name" class="contact__form-label" name="name"
                 >Name</label
@@ -494,7 +499,6 @@
                 required
               ></textarea>
             </div>
-            <div data-netlify-recaptcha="true"></div>
             <button class="contact__form-btn" type="submit">Send</button>
           </form>
 
