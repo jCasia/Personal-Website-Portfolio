@@ -1,9 +1,9 @@
 'use strict';
 
 //RELOAD BACK TO THE TOP
-window.addEventListener('beforeunload', () => {
-  window.scrollTo(0, 0);
-});
+// window.addEventListener('beforeunload', () => {
+//   window.scrollTo(0, 0);
+// });
 
 //HERO ANIMATION
 const topHeading = document.querySelector('.top-heading');
