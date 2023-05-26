@@ -30,7 +30,7 @@
     }
   }
   @if $breakpoint == mobile-medium {
-    @media only screen and (max-width: 375px) {
+    @media only screen and (max-width: 384px) {
       @content;
     }
   }
