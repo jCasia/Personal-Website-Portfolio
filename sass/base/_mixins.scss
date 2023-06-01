@@ -34,6 +34,11 @@
       @content;
     }
   }
+  @if $breakpoint == mobile-small {
+    @media only screen and (max-width: 320px) {
+      @content;
+    }
+  }
   @if $breakpoint == large-desktop {
     @media only screen and (min-width: 1700px) {
       @content;

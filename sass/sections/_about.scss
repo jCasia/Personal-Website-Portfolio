@@ -162,6 +162,9 @@ strong {
   @include responsive(mobile-medium) {
     transform: translate(-90px, 150px);
   }
+  @include responsive(mobile-small) {
+    transform: translate(-90px, 200px);
+  }
 }
 
 .hide {
