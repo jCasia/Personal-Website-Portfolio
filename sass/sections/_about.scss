@@ -138,7 +138,7 @@ strong {
 
 .curly-arrow {
   position: absolute;
-  transform: translate(-120px, 0);
+  transform: translate(-120px, 25px);
   transition: all 0.3s;
 
   @include responsive(tablet-bp-1) {
@@ -151,16 +151,12 @@ strong {
   }
 
   @include responsive(tablet-bp-4) {
-    transform: translate(-90px, 150px);
+    transform: translate(-90px, 100px);
     max-width: 150px;
   }
 
-  @include responsive(mobile-large) {
-    transform: translate(-90px, 80px);
-  }
-
   @include responsive(mobile-medium) {
-    transform: translate(-90px, 150px);
+    transform: translate(-90px, 110px);
   }
   @include responsive(mobile-small) {
     transform: translate(-90px, 200px);

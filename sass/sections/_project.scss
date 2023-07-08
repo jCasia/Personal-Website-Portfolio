@@ -46,17 +46,18 @@
   grid-template-areas:
     'project-1 project-2'
     'project-3 project-4'
-    'project-5 project-5';
+    'project-5 project-6';
 
   @include responsive(medium-laptop) {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     grid-template-areas:
       'project-1'
       'project-2'
       'project-3'
       'project-4'
-      'project-5';
+      'project-5'
+      'project-6';
   }
 
   &__card {
@@ -87,7 +88,9 @@
     }
     &-5 {
       grid-area: project-5;
-      justify-self: center;
+    }
+    &-6 {
+      grid-area: project-6;
     }
 
     &-img {
@@ -97,16 +100,17 @@
     &-img1,
     &-img2,
     &-img3,
-    &-img4 {
+    &-img4,
+    &-img5 {
       object-fit: cover;
       max-width: 100%;
     }
 
-    &-img-wrapper-5 {
+    &-img-wrapper-6 {
       @include flex;
     }
 
-    &-img5 {
+    &-img6 {
       max-width: 70%;
     }
 
